@@ -1,0 +1,79 @@
+.container{
+    display: grid;
+    // place-items: center;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    margin-top: 30px;
+    max-width: 450px;   margin: 0 auto;   padding: 20px;   border: 1px solid #ccc;   border-radius: 5px;   font-family: Arial, sans-serif;
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);  
+   
+
+}
+
+.room{
+    background-color: rgb(97, 125, 252);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.all{
+    height: 500px;
+    overflow-y: scroll;
+    border-left: 1px solid rgb(150, 146, 146);
+}
+.message{
+    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  
+    .text{
+        display: flex;
+        flex-direction: row;
+        border: 1px solid black;
+        border-radius: 10px;
+            
+        .from{
+            margin: 4px 10px;
+            border: 1px solid black;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            span{
+
+                margin: 5px 5px;
+                text-align: center;
+            }
+        }
+        .mess{
+                display: flex;
+                span{
+
+                margin: 10px 5px;
+                text-align: center;
+            }
+            }
+
+    }
+    
+}
+
+.sendmess{
+    background-color: rgb(227, 227, 227);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input{
+        width: 80%;
+        height: 30px;
+        border-radius: 10px;
+        border: 1px solid black;
+        margin: 10px 10px;
+    }
+}

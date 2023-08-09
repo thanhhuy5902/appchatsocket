@@ -1,14 +1,36 @@
-<input type="text" [(ngModel)]="roomId" placeholder="Enter room id ..." />
-<input type="text" [(ngModel)]="userName" placeholder="Enter your name ..." />
-<button (click)="joinRoom(roomId)">Join Room</button>
-<input
-  type="text"
-  [(ngModel)]="newMassage"
-  placeholder="Enter your message ..."
-/>
-<button (click)="sendMessage(newMassage)">Send</button>
+<div class="container">
+  <div class="room">
+    <h1>Chat with friends</h1>
+    <div class="input">
+      <input
+        type="text"
+        [(ngModel)]="userName"
+        placeholder="Enter your name ..."
+      />
+      <input type="text" [(ngModel)]="roomId" placeholder="Enter room id ..." />
+      <button (click)="joinRoom(roomId)">Join Room</button>
+    </div>
+  </div>
+  <div class="all">
+    <div class="message" *ngFor="let msg of messages">
+      <div class="text">
+        <div class="from">
+          <span>{{ msg.from }}</span>
+        </div>
+        <div class="mess">
+          <span>{{ msg.msg }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<div *ngFor="let msg of messages">
-  <p>From: {{ msg.from }}</p>
-  <p>From: {{ msg.msg }}</p>
+  <div class="sendmess">
+    <input
+      type="text"
+      [(ngModel)]="newMassage"
+      placeholder="Enter your message ..."
+    />
+
+    <mat-icon (click)="sendMessage(newMassage)">send</mat-icon>
+  </div>
 </div>
